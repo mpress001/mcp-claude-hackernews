@@ -1,5 +1,7 @@
 # MCP Claude Hacker News
 
+[![smithery badge](https://smithery.ai/badge/@imprvhub/mcp-claude-spotify)](https://smithery.ai/server/@imprvhub/mcp-claude-hackernews)
+
 An integration that allows Claude Desktop to interact with Hacker News using the Model Context Protocol (MCP).
 
 ## Features
