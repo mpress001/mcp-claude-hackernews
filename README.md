@@ -10,6 +10,14 @@ An integration that allows Claude Desktop to interact with Hacker News using the
 - Read comments for stories
 - Clean formatting of Hacker News content for better readability
 
+## Demo
+
+<p>
+  <a href="https://www.youtube.com/watch?v=SmPD6MLifJo">
+    <img src="public/assets/preview.png" width="600" alt="Claude Spotify Integration Demo">
+  </a>
+</p>
+
 ## Requirements
 
 - Node.js 16 or higher
