@@ -4,6 +4,10 @@
 
 An integration that allows Claude Desktop to interact with Hacker News using the Model Context Protocol (MCP).
 
+<a href="https://glama.ai/mcp/servers/@imprvhub/mcp-claude-hackernews">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@imprvhub/mcp-claude-hackernews/badge" alt="mcp-claude-hackernews MCP server" />
+</a>
+
 ## Features
 
 - Browse latest stories from Hacker News
