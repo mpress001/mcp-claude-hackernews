@@ -2,7 +2,14 @@
 
 [![smithery badge](https://smithery.ai/badge/@imprvhub/mcp-claude-spotify)](https://smithery.ai/server/@imprvhub/mcp-claude-hackernews)
 
-An integration that allows Claude Desktop to interact with Hacker News using the Model Context Protocol (MCP).
+<table style="border-collapse: collapse; width: 100%;">
+<tr>
+<td style="width: 50%; padding: 15px; vertical-align: middle; border: none;">An integration that allows Claude Desktop to interact with Spotify using the Model Context Protocol (MCP).</td>
+<td style="width: 50%; padding: 0; vertical-align: middle; border: none;"><a href="https://glama.ai/mcp/servers/@imprvhub/mcp-claude-hackernews">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@imprvhub/mcp-claude-hackernews/badge" alt="mcp-claude-hackernews MCP server" />
+</a></td>
+</tr>
+</table>
 
 ## Features
 
